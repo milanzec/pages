@@ -8,14 +8,14 @@
         <a (click)="currentPage = i" class="page-link">{{ i+1 }}</a>
       </li>
     </ng-container>
-    <li class="page-item" appClass [ngClass]="{disabled : currentPage === images.length-1}">
+    <li class="page-item"   [ngClass]="{disabled : currentPage === images.length-1}">
       <a (click)="currentPage = currentPage + 1" class="page-link">Next</a>
     </li>
   </ul>
 </nav>
 
 <div>
-  <h4>
+  <h4 appClass [backgroundColor]=" 'green' ">
     {{images[currentPage].title}}
   </h4>
   <img [src]="images[currentPage].url" alt={{images[currentPage].title}}>
